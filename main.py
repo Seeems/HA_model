@@ -4,9 +4,7 @@ import logging
 
 
 if __name__ == "__main__":
+    manager = data_manager.Manager()
+    data_dict = manager.load_data()
+    print('Break')
 
-    dmanger = data_manager.Manager()
-
-    # check if db exists
-    # wenn ja, soll neue CSV eingelesen werden?
-    # wenn nein, muss neue CSV eingelesen werden?

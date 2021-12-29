@@ -2,3 +2,196 @@
 2021-12-29 21:41:08,675 - INFO - table3 already exists!
 2021-12-29 21:41:08,680 - INFO - table2 already exists!
 2021-12-29 21:41:08,683 - INFO - table1 already exists!
+2021-12-29 22:48:11,119 - INFO - Initializing database. Checking if database exists.
+2021-12-29 22:48:39,109 - INFO - Initializing database. Checking if database exists.
+2021-12-29 22:48:39,110 - WARNING - No database found. Creating new Database...
+2021-12-29 22:51:59,142 - INFO - Initializing database. Checking if database exists.
+2021-12-29 22:51:59,170 - INFO - .DS_Store creation successfully!
+2021-12-29 22:51:59,185 - INFO - test creation successfully!
+2021-12-29 22:51:59,227 - INFO - ideal creation successfully!
+2021-12-29 22:51:59,240 - INFO - train creation successfully!
+2021-12-29 23:08:46,041 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:08:46,064 - INFO - .DS_Store already exists!
+2021-12-29 23:08:46,067 - INFO - test already exists!
+2021-12-29 23:08:46,074 - INFO - ideal already exists!
+2021-12-29 23:08:46,077 - INFO - train already exists!
+2021-12-29 23:09:52,848 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:09:52,853 - INFO - .DS_Store already exists!
+2021-12-29 23:09:52,855 - INFO - test already exists!
+2021-12-29 23:09:52,861 - INFO - ideal already exists!
+2021-12-29 23:09:52,864 - INFO - train already exists!
+2021-12-29 23:10:20,497 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:10:20,519 - INFO - .DS_Store already exists!
+2021-12-29 23:10:20,523 - INFO - test already exists!
+2021-12-29 23:10:20,531 - INFO - ideal already exists!
+2021-12-29 23:10:20,534 - INFO - train already exists!
+2021-12-29 23:10:34,890 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:10:34,902 - INFO - .DS_Store already exists!
+2021-12-29 23:10:34,906 - INFO - test already exists!
+2021-12-29 23:10:34,915 - INFO - ideal already exists!
+2021-12-29 23:10:34,919 - INFO - train already exists!
+2021-12-29 23:10:49,809 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:10:49,816 - INFO - .DS_Store already exists!
+2021-12-29 23:10:49,818 - INFO - test already exists!
+2021-12-29 23:10:49,828 - INFO - ideal already exists!
+2021-12-29 23:10:49,831 - INFO - train already exists!
+2021-12-29 23:11:27,662 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:11:27,666 - INFO - .DS_Store already exists!
+2021-12-29 23:11:27,668 - INFO - test already exists!
+2021-12-29 23:11:27,674 - INFO - ideal already exists!
+2021-12-29 23:11:27,677 - INFO - train already exists!
+2021-12-29 23:11:34,345 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:11:34,352 - INFO - .DS_Store already exists!
+2021-12-29 23:11:34,355 - INFO - test already exists!
+2021-12-29 23:11:34,365 - INFO - ideal already exists!
+2021-12-29 23:11:34,368 - INFO - train already exists!
+2021-12-29 23:35:24,267 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:35:24,275 - INFO - .DS_Store already exists!
+2021-12-29 23:35:24,277 - INFO - test already exists!
+2021-12-29 23:35:24,284 - INFO - ideal already exists!
+2021-12-29 23:35:24,287 - INFO - train already exists!
+2021-12-29 23:35:36,551 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:35:36,552 - WARNING - No database found. Creating new Database...
+2021-12-29 23:35:36,570 - INFO - .DS_Store creation successfully!
+2021-12-29 23:35:36,585 - INFO - test creation successfully!
+2021-12-29 23:35:36,639 - INFO - ideal creation successfully!
+2021-12-29 23:35:36,661 - INFO - train creation successfully!
+2021-12-29 23:35:51,330 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:35:51,334 - INFO - .DS_Store already exists!
+2021-12-29 23:35:51,338 - INFO - test already exists!
+2021-12-29 23:35:51,345 - INFO - ideal already exists!
+2021-12-29 23:35:51,347 - INFO - train already exists!
+2021-12-29 23:37:01,603 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:37:01,619 - INFO - .DS_Store already exists!
+2021-12-29 23:37:01,621 - INFO - test already exists!
+2021-12-29 23:37:01,627 - INFO - ideal already exists!
+2021-12-29 23:37:01,630 - INFO - train already exists!
+2021-12-29 23:37:12,293 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:37:12,294 - WARNING - No database found. Creating new Database...
+2021-12-29 23:37:12,323 - INFO - .DS_Store creation successfully!
+2021-12-29 23:37:12,334 - INFO - test creation successfully!
+2021-12-29 23:37:12,379 - INFO - ideal creation successfully!
+2021-12-29 23:37:12,393 - INFO - train creation successfully!
+2021-12-29 23:37:24,640 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:37:24,663 - INFO - .DS_Store already exists!
+2021-12-29 23:37:24,666 - INFO - test already exists!
+2021-12-29 23:37:24,676 - INFO - ideal already exists!
+2021-12-29 23:37:24,681 - INFO - train already exists!
+2021-12-29 23:37:46,301 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:37:46,327 - INFO - .DS_Store already exists!
+2021-12-29 23:37:46,331 - INFO - test already exists!
+2021-12-29 23:37:46,344 - INFO - ideal already exists!
+2021-12-29 23:37:46,350 - INFO - train already exists!
+2021-12-29 23:41:10,095 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:41:10,105 - INFO - .DS_Store already exists!
+2021-12-29 23:41:10,110 - INFO - test already exists!
+2021-12-29 23:41:10,117 - INFO - ideal already exists!
+2021-12-29 23:41:10,120 - INFO - train already exists!
+2021-12-29 23:41:27,902 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:41:27,912 - INFO - .DS_Store already exists!
+2021-12-29 23:41:27,914 - INFO - test already exists!
+2021-12-29 23:41:27,923 - INFO - ideal already exists!
+2021-12-29 23:41:27,926 - INFO - train already exists!
+2021-12-29 23:42:06,884 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:42:06,897 - INFO - .DS_Store already exists!
+2021-12-29 23:42:06,901 - INFO - test already exists!
+2021-12-29 23:42:06,911 - INFO - ideal already exists!
+2021-12-29 23:42:06,915 - INFO - train already exists!
+2021-12-29 23:43:54,667 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:43:54,668 - WARNING - No database found. Creating new Database...
+2021-12-29 23:43:54,793 - INFO - .DS_Store creation successfully!
+2021-12-29 23:43:54,817 - INFO - test creation successfully!
+2021-12-29 23:43:54,903 - INFO - ideal creation successfully!
+2021-12-29 23:43:54,917 - INFO - train creation successfully!
+2021-12-29 23:44:01,534 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:44:01,539 - INFO - .DS_Store already exists!
+2021-12-29 23:44:01,542 - INFO - test already exists!
+2021-12-29 23:44:01,549 - INFO - ideal already exists!
+2021-12-29 23:44:01,552 - INFO - train already exists!
+2021-12-29 23:45:41,314 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:45:41,317 - WARNING - No database found. Creating new Database...
+2021-12-29 23:47:15,713 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:47:15,715 - WARNING - No database found. Creating new Database...
+2021-12-29 23:47:15,749 - INFO - test creation successfully!
+2021-12-29 23:47:15,801 - INFO - ideal creation successfully!
+2021-12-29 23:47:15,819 - INFO - train creation successfully!
+2021-12-29 23:47:18,468 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:47:18,474 - INFO - test already exists!
+2021-12-29 23:47:18,480 - INFO - ideal already exists!
+2021-12-29 23:47:18,483 - INFO - train already exists!
+2021-12-29 23:48:21,326 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:48:21,356 - INFO - test already exists!
+2021-12-29 23:48:21,367 - INFO - ideal already exists!
+2021-12-29 23:48:21,370 - INFO - train already exists!
+2021-12-29 23:48:28,316 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:48:28,324 - INFO - test already exists!
+2021-12-29 23:48:28,331 - INFO - ideal already exists!
+2021-12-29 23:48:28,333 - INFO - train already exists!
+2021-12-29 23:49:34,300 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:49:34,321 - INFO - test already exists!
+2021-12-29 23:49:34,330 - INFO - ideal already exists!
+2021-12-29 23:49:34,333 - INFO - train already exists!
+2021-12-29 23:50:50,689 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:50:50,705 - INFO - test already exists!
+2021-12-29 23:50:50,717 - INFO - ideal already exists!
+2021-12-29 23:50:50,721 - INFO - train already exists!
+2021-12-29 23:51:21,447 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:51:21,463 - INFO - test already exists!
+2021-12-29 23:51:21,473 - INFO - ideal already exists!
+2021-12-29 23:51:21,476 - INFO - train already exists!
+2021-12-29 23:51:39,867 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:51:39,877 - INFO - test already exists!
+2021-12-29 23:51:39,885 - INFO - ideal already exists!
+2021-12-29 23:51:39,888 - INFO - train already exists!
+2021-12-29 23:52:08,227 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:52:08,235 - INFO - test already exists!
+2021-12-29 23:52:08,244 - INFO - ideal already exists!
+2021-12-29 23:52:08,250 - INFO - train already exists!
+2021-12-29 23:54:01,788 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:54:01,802 - INFO - test already exists!
+2021-12-29 23:54:01,810 - INFO - ideal already exists!
+2021-12-29 23:54:01,814 - INFO - train already exists!
+2021-12-29 23:54:13,287 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:54:13,296 - INFO - test already exists!
+2021-12-29 23:54:13,304 - INFO - ideal already exists!
+2021-12-29 23:54:13,308 - INFO - train already exists!
+2021-12-29 23:54:43,297 - INFO - Initializing database. Checking if database exists.
+2021-12-29 23:54:43,303 - INFO - test already exists!
+2021-12-29 23:54:43,312 - INFO - ideal already exists!
+2021-12-29 23:54:43,315 - INFO - train already exists!
+2021-12-30 00:01:07,589 - INFO - Initializing database. Checking if database exists.
+2021-12-30 00:01:07,603 - INFO - test already exists!
+2021-12-30 00:01:07,611 - INFO - ideal already exists!
+2021-12-30 00:01:07,615 - INFO - train already exists!
+2021-12-30 00:01:37,493 - INFO - Initializing database. Checking if database exists.
+2021-12-30 00:01:37,499 - INFO - test already exists!
+2021-12-30 00:01:37,506 - INFO - ideal already exists!
+2021-12-30 00:01:37,509 - INFO - train already exists!
+2021-12-30 00:04:35,875 - INFO - Initializing database. Checking if database exists.
+2021-12-30 00:04:35,884 - INFO - test already exists!
+2021-12-30 00:04:35,890 - INFO - ideal already exists!
+2021-12-30 00:04:35,893 - INFO - train already exists!
+2021-12-30 00:09:16,467 - INFO - Initializing database. Checking if database exists.
+2021-12-30 00:09:16,476 - INFO - test already exists!
+2021-12-30 00:09:16,483 - INFO - ideal already exists!
+2021-12-30 00:09:16,487 - INFO - train already exists!
+2021-12-30 00:09:56,089 - INFO - Initializing database. Checking if database exists.
+2021-12-30 00:09:56,094 - INFO - test already exists!
+2021-12-30 00:09:56,101 - INFO - ideal already exists!
+2021-12-30 00:09:56,104 - INFO - train already exists!
+2021-12-30 00:10:45,207 - INFO - Initializing database. Checking if database exists.
+2021-12-30 00:10:45,211 - INFO - test already exists!
+2021-12-30 00:10:45,216 - INFO - ideal already exists!
+2021-12-30 00:10:45,219 - INFO - train already exists!
+2021-12-30 00:10:56,871 - INFO - Initializing database. Checking if database exists.
+2021-12-30 00:10:56,875 - INFO - test already exists!
+2021-12-30 00:10:56,881 - INFO - ideal already exists!
+2021-12-30 00:10:56,886 - INFO - train already exists!
+2021-12-30 00:14:27,602 - INFO - Initializing database. Checking if database exists.
+2021-12-30 00:14:27,612 - INFO - test already exists!
+2021-12-30 00:14:27,619 - INFO - ideal already exists!
+2021-12-30 00:14:27,622 - INFO - train already exists!
+2021-12-30 00:14:55,230 - INFO - Initializing database. Checking if database exists.
+2021-12-30 00:14:55,246 - INFO - test already exists!
+2021-12-30 00:14:55,258 - INFO - ideal already exists!
+2021-12-30 00:14:55,262 - INFO - train already exists!
