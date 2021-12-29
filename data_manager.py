@@ -28,9 +28,8 @@ class Manager(object):
         Manager
 
     Functions:
-        initialize_database()
-        database_modification(data: pd.DataFrame, table_no: int)
-        csv_loader(self, file_name: str, directory_path: str = PROJECT_LOCATION) -> pd.DataFrame
+        initialize_database(directory_path: str = PROJECT_LOCATION)
+        database_modification()
 
     Misc variables:
         PROJECT_LOCATION
@@ -48,7 +47,12 @@ class Manager(object):
         return
 
     def initialize_database(self, directory_path: str = PROJECT_LOCATION):
+        """
+        Initialization of the database with all data files. Execution at initialization of class object.
 
+        :param directory_path: string, default set to PROJECT_LOCATION
+        :return:
+        """
         self.logger.info("Initializing database. Checking if database exists.")
 
         # Getting all CSV filenames of file directory
@@ -64,38 +68,29 @@ class Manager(object):
             file_path = os.path.join(files_path, file_name)
             table_df = pd.read_csv(file_path)
 
-            # check if filename contains a number
-            if any(char.isdigit() for char in file_name):
+            # get filename without extension for table name
+            name = os.path.splitext(file_name)[0]
 
-                # Get Table number for table name
-                for number in file_name:
-                    if number.isdigit():
-                        i = number
+            # check if table exists
+            if not self.db.dialect.has_table(self.db.connect(), f'{name}'):
 
-                # check if table exists
-                if not self.db.dialect.has_table(self.db.connect(), f'table{i}'):
-
-                    # create table 1 with data of csv
-                    table_df.to_sql(f'table{i}',
-                                    self.db,
-                                    if_exists='replace',
-                                    index=True)
-                    self.logger.info(f'table {i} creation successfully!')
-
-                else:
-                    self.logger.info(f'table {i} already exists!')
+                # write data into new table
+                table_df.to_sql(f'{name}',
+                                self.db,
+                                if_exists='replace',
+                                index=True)
+                self.logger.info(f'{name} creation successfully!')
 
             else:
-                print("Table number not in range (1 - 3)")
+                self.logger.info(f'{name} already exists!')
 
-    def database_modification(self, table_no: int):
+
+    def load_data(self) -> pd.DataFrame:
+        """Loads data from sqlite database into DataFrames"""
+
+
+
+    def database_modification(self, data: pd.DataFrame):
         """
-        Checks if table already exists and fill in the tables
-
-        :param table_no: Number of exercise table
-        :param data: Data for database
-        :return: none
 
         """
-
-    # Laden von Daten aus SQL-Datenbank

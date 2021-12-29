@@ -1,1 +1,1 @@
-"# HA_model" 
+#Model für Hausarbeit in "Programmieren mit Python" ()
