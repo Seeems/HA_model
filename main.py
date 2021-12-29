@@ -5,8 +5,6 @@ import logging
 
 if __name__ == "__main__":
 
-
-    print(data_manager.Manager.__doc__)
     dmanger = data_manager.Manager()
 
     # check if db exists

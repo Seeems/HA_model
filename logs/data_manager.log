@@ -1,6 +1,38 @@
-2021-12-29 13:05:41,501 - INFO - Initializing database. Checking if database exists.
-2021-12-29 13:05:41,513 - INFO - Database already exists
-2021-12-29 14:05:59,451 - INFO - Initializing database. Checking if database exists.
-2021-12-29 14:05:59,474 - INFO - Database already exists
-2021-12-29 14:10:16,070 - INFO - Initializing database. Checking if database exists.
-2021-12-29 14:10:16,083 - INFO - Database already exists
+2021-12-29 18:17:35,174 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:17:35,226 - INFO - table 2 creation uccessfully!
+2021-12-29 18:17:35,249 - INFO - table 1 creation successfully!
+2021-12-29 18:17:53,016 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:17:53,131 - INFO - table 2 creation uccessfully!
+2021-12-29 18:18:37,479 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:18:37,559 - INFO - table 2 creation uccessfully!
+2021-12-29 18:19:21,643 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:19:21,731 - INFO - table 2 creation uccessfully!
+2021-12-29 18:21:04,517 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:21:04,559 - INFO - table 2 creation uccessfully!
+2021-12-29 18:21:04,575 - INFO - table 1 creation successfully!
+2021-12-29 18:22:24,390 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:22:24,432 - INFO - table 2 creation uccessfully!
+2021-12-29 18:22:24,449 - INFO - table 1 creation successfully!
+2021-12-29 18:26:14,679 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:26:49,999 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:27:08,455 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:27:35,918 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:28:20,450 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:29:04,513 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:31:27,030 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:32:26,356 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:35:46,995 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:36:09,156 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:36:09,184 - INFO - table 3 creation successfully!
+2021-12-29 18:36:09,190 - INFO - table 2 already exists!
+2021-12-29 18:36:09,194 - INFO - table 1 already exists!
+2021-12-29 18:36:28,147 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:36:28,153 - INFO - table 3 already exists!
+2021-12-29 18:36:28,158 - INFO - table 2 already exists!
+2021-12-29 18:36:28,160 - INFO - table 1 already exists!
+2021-12-29 18:39:55,862 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:44:07,231 - INFO - Initializing database. Checking if database exists.
+2021-12-29 18:44:07,253 - INFO - table 3 already exists!
+2021-12-29 18:44:07,259 - INFO - table 2 already exists!
+2021-12-29 18:44:07,261 - INFO - table 1 already exists!
+2021-12-29 18:44:33,440 - INFO - Initializing database. Checking if database exists.
