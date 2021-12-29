@@ -2,7 +2,6 @@ import os
 import json
 
 import sqlalchemy
-from sqlalchemy.exc import OperationalError
 import sqlalchemy_utils
 import pandas as pd
 
@@ -36,6 +35,7 @@ class Manager(object):
     Misc variables:
         PROJECT_LOCATION
     """
+
     def __init__(self):
         self.config = config
         self.db_url = 'sqlite:///{}'.format(
@@ -47,24 +47,48 @@ class Manager(object):
         self.initialize_database()
         return
 
-    def initialize_database(self, file_name: str, directory_path: str = PROJECT_LOCATION):
+    def initialize_database(self, directory_path: str = PROJECT_LOCATION):
 
         self.logger.info("Initializing database. Checking if database exists.")
 
+        # Getting all CSV filenames of file directory
+        files_path = os.path.join(directory_path, 'files/')
+        file_list = [f for f in os.listdir(files_path) if os.path.isfile(os.path.join(files_path, f))]
+
         if not sqlalchemy_utils.database_exists(self.db.url):
-            self.logger.warning("No database found. Creating new Database.")
+            self.logger.warning("No database found. Creating new Database...")
             sqlalchemy_utils.create_database(self.db.url)
 
+        # get all csv
+        for file_name in file_list:
+            file_path = os.path.join(files_path, file_name)
+            table_df = pd.read_csv(file_path)
 
-            file_path = os.path.join(file_name, directory_path)
-            df = pd.read_csv(file_path)
+            # check if filename contains a number
+            if any(char.isdigit() for char in file_name):
 
+                # Get Table number for table name
+                for number in file_name:
+                    if number.isdigit():
+                        i = number
 
-        else:
-            self.logger.info("Database already exists")
-            #if tables not existing
+                # check if table exists
+                if not self.db.dialect.has_table(self.db.connect(), f'table{i}'):
 
-    def database_modification(self, data: pd.DataFrame, table_no: int):
+                    # create table 1 with data of csv
+                    table_df.to_sql(f'table{i}',
+                                    self.db,
+                                    if_exists='replace',
+                                    index=True)
+                    self.logger.info(f'table {i} creation successfully!')
+
+                else:
+                    self.logger.info(f'table {i} already exists!')
+
+            else:
+                print("Table number not in range (1 - 3)")
+
+    def database_modification(self, table_no: int):
         """
         Checks if table already exists and fill in the tables
 
@@ -73,22 +97,5 @@ class Manager(object):
         :return: none
 
         """
-        if table_no == 1:
-            table1_df = self.csv_loader('table1.csv')
-            table1_df.to_sql(data)
-            try:
-                sql_update_statement = data
-                self.db.connect()
-                self.db.execute(sql_update_statement)
-            except OperationalError:
-                # Switch database component of the uri
-                self.logger.warning('No table 1 available. New table will be created.')
-                meta = sqlalchemy.MetaData(self.db)
-        elif table_no == 2:
-
-        elif table_no == 3:
-
-        else:
-            print("Table number not in range (1 - 3)")
 
     # Laden von Daten aus SQL-Datenbank

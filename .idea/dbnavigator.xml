@@ -32,11 +32,13 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="cda00b14-c8ca-48be-9b88-846795288ed6">
-      <console name="Test" type="STANDARD" schema="main" session="Main" />
+      <console name="Test" type="STANDARD" schema="main" session="Main"><![CDATA[SELECT * FROM table2]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="cda00b14-c8ca-48be-9b88-846795288ed6" object-ref="consoles/Test" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="cda00b14-c8ca-48be-9b88-846795288ed6" />
@@ -92,7 +94,7 @@
           <deprecated-pwd value="" />
         </database>
         <properties>
-          <auto-commit value="false" />
+          <auto-commit value="true" />
         </properties>
         <ssh-settings>
           <active value="false" />
