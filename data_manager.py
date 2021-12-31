@@ -4,7 +4,6 @@ from typing import Dict, Any, Union, Iterator
 
 import sqlalchemy
 import sqlalchemy_utils
-from pandas import DataFrame
 from sqlalchemy.ext.declarative import declarative_base
 import pandas as pd
 
@@ -51,7 +50,6 @@ class Manager(object):
         self.meta = sqlalchemy.MetaData()
         self.meta.reflect(bind=self.db)
         self.initialize_database()
-        return
 
     def initialize_database(self, directory_path: str = PROJECT_LOCATION):
         """
@@ -99,3 +97,4 @@ class Manager(object):
             print(table)
             df_dict[table] = pd.read_sql_query(f'SELECT * FROM {table}', self.db)
         return df_dict
+
