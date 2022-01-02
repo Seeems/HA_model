@@ -14,9 +14,10 @@ if __name__ == "__main__":
     manager = data_manager.Manager()
     data_list = manager.load_data()
 
-    #graph.plot_data(data_list['ideal'])
+    #graph.plot_data(data_list['ideal'], multiple_y=True)
+    #graph.plot_data(data_list['test'], multiple_y=False)
 
-
-    model.identify_ideal_func(data_list)
+    model = model.Model(data_list)
+    model.validate_best_func()
 
 

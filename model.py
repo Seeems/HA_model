@@ -1,71 +1,78 @@
-from sklearn.metrics import mean_squared_error
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
-from scipy import optimize
-from scipy.fftpack import fft
-from IPython.display import display, Math
-from scipy.interpolate import interp1d
-
-def differentiate_functions(df1, df2):
-    best_func = []
-    error_list = []
-    error_dict = {}
-    df1_iterator = 1
-    while df1_iterator <= (len(df1.columns) - 2):
-
-        df2_iterator = 1
-
-        while df2_iterator <= (len(df2.columns) - 2):
-
-            error_dict[f'{df2_iterator}'] = np.sum(
-                (df1[f'y{df1_iterator}'] - df2[f'y{df2_iterator}']) ** 2)
-
-            df2_iterator += 1
-
-        best_ideal = {k: v for k, v in sorted(error_dict.items(), key=lambda item: item[1])}
-        best_func.append(list(best_ideal.keys())[0])
 
 
-        df1_iterator += 1
+class Model:
 
+    def __init__(self, data):
+        self.ideal_df = data['ideal']
+        self.test_df = data['test']
+        self.train_df = data['train']
+        self.best_func = self.get_best_functions()
 
-    return best_func
+    def get_best_functions(self):
+        best_func = []
+        error_dict = {}
+        train_iterator = 1
 
-def validate_best_func(df1, df2, best_func):
-    error_list = []
-    for i in best_func:
-        error_list.append(mean_squared_error(df1['y'], df2[f'y{i}']))
+        # for each train dataset get squared error to all ideal functions
+        while train_iterator <= (len(self.train_df.columns) - 2):
 
-    for i in error_list:
-        if i > np.sqrt(2):
-            print('Failed!')
-    return error_list
+            ideal_iterator = 1
 
-def identify_ideal_func(data):
-    ideal_df = data['ideal']
-    test_df = data['test']
-    train_df = data['train']
+            while ideal_iterator <= (len(self.ideal_df.columns) - 2):
 
+                # Get all squared errors
+                error_dict[f'{ideal_iterator}'] = np.sum(
+                    (self.train_df[f'y{train_iterator}'] - self.ideal_df[f'y{ideal_iterator}']) ** 2)
 
+                ideal_iterator += 1
 
-    best_func = differentiate_functions(train_df, ideal_df)
+            best_ideal = {k: v for k, v in sorted(error_dict.items(), key=lambda item: item[1])}
+            best_func.append(list(best_ideal.keys())[0])
 
+            train_iterator += 1
 
-    ll = [1,2,3,4]
+        return best_func
 
-    for i in best_func:
-        plt.plot(ideal_df[f'x'], ideal_df[f'y{i}'], label = f"ideal y{i}")
-    plt.xlabel('x - axis')
-    plt.ylabel('y - axis')
-    plt.legend()
-    plt.show()
+    def validate_best_func(self):
+        error_list = []
+        difference_df = pd.DataFrame()
+        for i in self.best_func:
+            x = 0
+            while x < len(self.test_df.index):
+                print(x)
+                x_pos = self.test_df.iloc[x]['x']
+                y_pos = self.test_df.iloc[x]['y']
 
-    for i in ll:
-        plt.plot(train_df[f'x'], train_df[f'y{i}'], label=f"train y{i}")
-    plt.xlabel('x - axis')
-    plt.ylabel('y - axis')
-    plt.legend()
-    plt.show()
+                index_x_ideal = self.ideal_df.index[self.ideal_df.x == x_pos]
+                difference = y_pos - int(self.ideal_df.iloc[index_x_ideal][f'y{i}'])
+                data = {'x': [x_pos], 'y': [y_pos], 'delta': [difference], 'func': [f'y{i}']}
+                difference_df = difference_df.append(pd.DataFrame(data), ignore_index=True)
+                x += 1
+            # mse = se / len(self.test_df.index)
+            # check = np.sqrt(2)
+            # error_list.append(mse)
+            # if mse > check:
+            #     print('Failed!')
 
-    print(validate_best_func(test_df, ideal_df, best_func))
+        print(error_list)
+        return error_list
+
+    def show_best_func(self):
+
+        for i in self.best_func:
+            plt.plot(self.ideal_df[f'x'], self.ideal_df[f'y{i}'], label=f"ideal y{i}")
+        plt.xlabel('x - axis')
+        plt.ylabel('y - axis')
+        plt.legend()
+        # plt.show()
+
+        for i in self.train_df.columns.tolist()[1:]:
+            plt.plot(self.train_df[f'x'], self.train_df[f'y{i}'], label=f"train y{i}")
+        plt.xlabel('x - axis')
+        plt.ylabel('y - axis')
+        plt.legend()
+        # plt.show()
 
