@@ -4,7 +4,19 @@ import matplotlib.pyplot as plt
 
 
 class Model:
+    """
+    Model Class for all data transformations.
 
+    Classes:
+        Model
+
+    Functions:
+        initialize_database(directory_path: str = PROJECT_LOCATION)
+        database_modification()
+
+    Misc variables:
+        none
+    """
     def __init__(self, data):
         self.ideal_df = data['ideal']
         self.test_df = data['test']
@@ -12,6 +24,8 @@ class Model:
         self.best_func = self.get_best_functions()
 
     def get_best_functions(self):
+        """:type
+        """
         best_func = []
         error_dict = {}
         train_iterator = 1

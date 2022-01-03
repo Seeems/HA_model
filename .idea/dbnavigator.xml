@@ -17,7 +17,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="UTF-8" />
+      <charset value="windows-1252" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -26,13 +26,13 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="cda00b14-c8ca-48be-9b88-846795288ed6">
-        <schema name="main" object-types="table, view, constraint, index, column, dataset trigger" />
+        <schema name="main" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="cda00b14-c8ca-48be-9b88-846795288ed6">
-      <console name="Test" type="STANDARD" schema="main" session="Main"><![CDATA[SELECT * FROM test]]></console>
+      <console name="Test" type="STANDARD" schema="main" session="Main"><![CDATA[SELECT * FROM ideal]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

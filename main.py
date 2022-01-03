@@ -1,12 +1,9 @@
-import seaborn as sns
 import matplotlib.pyplot as plt
 
 import data_manager
 import graph
 import model
 
-
-sns.set_theme(style="darkgrid")
 
 if __name__ == "__main__":
 

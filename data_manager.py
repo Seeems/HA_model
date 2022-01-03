@@ -38,20 +38,26 @@ class Manager(object):
     """
 
     def __init__(self):
-        self.config = config
+        """
+        Initialize class with needed variables
+
+        :var self.db_url: Takes URI to database out of the config
+        :var self.logger: creates a new logger from setup_logger.py
+        :var self.db: SQL Alchemy engine (SQLite3)
+        :var self.meta: create metadata object of SQL Alchemy
+        :exec self.initialize_database
+        """
         self.db_url = 'sqlite:///{}'.format(
             os.path.join(os.path.dirname(__file__),
                          config['SQLALCHEMY_DATABASE_URI']))
         self.logger = setup_logger.setup('data_manager')
         self.db = sqlalchemy.create_engine(self.db_url)
-        self.Base = declarative_base()
-        self.Base.metadata.reflect(self.db)
-
+        self.initialize_database()
         self.meta = sqlalchemy.MetaData()
         self.meta.reflect(bind=self.db)
-        self.initialize_database()
 
-    def initialize_database(self, directory_path: str = PROJECT_LOCATION):
+
+    def initialize_database(self, directory_path: strgit = PROJECT_LOCATION) -> None:
         """
         Initialization of the database with all data files. Execution at initialization of class object.
 
