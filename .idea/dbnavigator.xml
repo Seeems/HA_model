@@ -17,22 +17,18 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1252" />
+      <charset value="UTF-8" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="cda00b14-c8ca-48be-9b88-846795288ed6">
-        <schema name="main" object-types="table, view" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="cda00b14-c8ca-48be-9b88-846795288ed6">
-      <console name="Test" type="STANDARD" schema="main" session="Main"><![CDATA[SELECT * FROM ideal]]></console>
+      <console name="Test" type="STANDARD" schema="main" session="Main">SELECT * FROM ideal</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

@@ -57,7 +57,7 @@ class Manager(object):
         self.meta.reflect(bind=self.db)
 
 
-    def initialize_database(self, directory_path: strgit = PROJECT_LOCATION) -> None:
+    def initialize_database(self, directory_path: str = PROJECT_LOCATION) -> None:
         """
         Initialization of the database with all data files. Execution at initialization of class object.
 
@@ -85,7 +85,7 @@ class Manager(object):
             # check if table exists
             if not self.db.dialect.has_table(self.db.connect(), f'{name}'):
 
-                # write data into new table
+                # if table not exists, write data into new table
                 table_df.to_sql(f'{name}',
                                 self.db,
                                 if_exists='replace',

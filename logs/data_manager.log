@@ -1091,3 +1091,43 @@
 2022-01-02 13:24:33,904 - INFO - test already exists!
 2022-01-02 13:24:33,919 - INFO - ideal already exists!
 2022-01-02 13:24:33,924 - INFO - train already exists!
+2022-01-03 21:30:29,260 - INFO - Initializing database. Checking if database exists.
+2022-01-03 21:30:29,284 - INFO - test already exists!
+2022-01-03 21:30:29,291 - INFO - ideal already exists!
+2022-01-03 21:30:29,294 - INFO - train already exists!
+2022-01-03 21:31:00,950 - INFO - Initializing database. Checking if database exists.
+2022-01-03 21:31:00,966 - INFO - test already exists!
+2022-01-03 21:31:00,976 - INFO - ideal already exists!
+2022-01-03 21:31:00,980 - INFO - train already exists!
+2022-01-03 21:41:06,072 - INFO - Initializing database. Checking if database exists.
+2022-01-03 21:41:06,108 - INFO - test already exists!
+2022-01-03 21:41:06,123 - INFO - ideal already exists!
+2022-01-03 21:41:06,127 - INFO - train already exists!
+2022-01-03 21:42:09,605 - INFO - Initializing database. Checking if database exists.
+2022-01-03 21:42:09,626 - INFO - test already exists!
+2022-01-03 21:42:09,638 - INFO - ideal already exists!
+2022-01-03 21:42:09,642 - INFO - train already exists!
+2022-01-04 13:30:43,406 - INFO - Initializing database. Checking if database exists.
+2022-01-04 13:30:43,426 - INFO - test already exists!
+2022-01-04 13:30:43,434 - INFO - ideal already exists!
+2022-01-04 13:30:43,437 - INFO - train already exists!
+2022-01-04 13:35:32,894 - INFO - Initializing database. Checking if database exists.
+2022-01-04 13:35:32,913 - INFO - test already exists!
+2022-01-04 13:35:32,920 - INFO - ideal already exists!
+2022-01-04 13:35:32,924 - INFO - train already exists!
+2022-01-04 13:36:21,584 - INFO - Initializing database. Checking if database exists.
+2022-01-04 13:36:21,608 - INFO - test already exists!
+2022-01-04 13:36:21,615 - INFO - ideal already exists!
+2022-01-04 13:36:21,618 - INFO - train already exists!
+2022-01-04 13:38:21,290 - INFO - Initializing database. Checking if database exists.
+2022-01-04 13:38:21,294 - INFO - test already exists!
+2022-01-04 13:38:21,299 - INFO - ideal already exists!
+2022-01-04 13:38:21,301 - INFO - train already exists!
+2022-01-04 13:38:52,989 - INFO - Initializing database. Checking if database exists.
+2022-01-04 13:38:52,993 - INFO - test already exists!
+2022-01-04 13:38:52,998 - INFO - ideal already exists!
+2022-01-04 13:38:52,999 - INFO - train already exists!
+2023-01-04 21:03:30,694 - INFO - Initializing database. Checking if database exists.
+2023-01-04 21:03:30,702 - INFO - test already exists!
+2023-01-04 21:03:30,709 - INFO - ideal already exists!
+2023-01-04 21:03:30,712 - INFO - train already exists!

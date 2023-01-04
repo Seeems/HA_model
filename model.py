@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.metrics import mean_absolute_error
 
 
 class Model:
@@ -43,6 +44,7 @@ class Model:
 
                 ideal_iterator += 1
 
+            # Get minimal error -> least squared error
             best_ideal = {k: v for k, v in sorted(error_dict.items(), key=lambda item: item[1])}
             best_func.append(list(best_ideal.keys())[0])
 
@@ -53,20 +55,37 @@ class Model:
     def validate_best_func(self):
         error_list = []
         difference_df = pd.DataFrame()
+        mse = 0
+        mse_list = 0
+        mae = 0
+        mae_list = 0
         for i in self.best_func:
             x = 0
+            n = len(self.test_df.index)
             while x < len(self.test_df.index):
-                print(x)
+
                 x_pos = self.test_df.iloc[x]['x']
                 y_pos = self.test_df.iloc[x]['y']
 
                 index_x_ideal = self.ideal_df.index[self.ideal_df.x == x_pos]
-                difference = y_pos - int(self.ideal_df.iloc[index_x_ideal][f'y{i}'])
-                data = {'x': [x_pos], 'y': [y_pos], 'delta': [difference], 'func': [f'y{i}']}
-                difference_df = difference_df.append(pd.DataFrame(data), ignore_index=True)
+
+                absolute_difference = y_pos - int(self.ideal_df.iloc[index_x_ideal][f'y{i}'])
+                data = {'x': [x_pos], 'y': [y_pos], 'delta': [absolute_difference], 'func': [f'y{i}']}
+                # difference_df = difference_df.append(pd.DataFrame(data), ignore_index=True)
+                mae_list += absolute_difference
+                mse_list += (absolute_difference)**2
+                #print(mse_list)
                 x += 1
-            # mse = se / len(self.test_df.index)
-            # check = np.sqrt(2)
+            mse = mse_list / n
+            rmse = np.sqrt(mse / n)
+            rse = np.sqrt(mse / (n - 2))
+            mae = mae_list / n
+            print(f'Func y{i}')
+            print('RSE =', rse)
+            print('RMSE =', rmse)
+            print('MAE =', mae)
+            print('MSE =', mse)
+            print('-------- \n')
             # error_list.append(mse)
             # if mse > check:
             #     print('Failed!')
