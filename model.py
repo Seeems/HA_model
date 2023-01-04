@@ -1,6 +1,9 @@
+import math
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import graph
 from sklearn.metrics import mean_absolute_error
 
 
@@ -22,12 +25,11 @@ class Model:
         self.ideal_df = data['ideal']
         self.test_df = data['test']
         self.train_df = data['train']
-        self.best_func = self.get_best_functions()
 
     def get_best_functions(self):
         """:type
         """
-        best_func = []
+        best_func_keys = []
         error_dict = {}
         train_iterator = 1
 
@@ -38,74 +40,50 @@ class Model:
 
             while ideal_iterator <= (len(self.ideal_df.columns) - 2):
 
-                # Get all squared errors
+                # Get sum of all squared errors
                 error_dict[f'{ideal_iterator}'] = np.sum(
                     (self.train_df[f'y{train_iterator}'] - self.ideal_df[f'y{ideal_iterator}']) ** 2)
 
                 ideal_iterator += 1
 
-            # Get minimal error -> least squared error
+            # Get minimal error of least squared error and save in ordered list
             best_ideal = {k: v for k, v in sorted(error_dict.items(), key=lambda item: item[1])}
-            best_func.append(list(best_ideal.keys())[0])
-
+            best_func_keys.append(f'y{list(best_ideal.keys())[0]}')
             train_iterator += 1
+        return best_func_keys
 
-        return best_func
+    def validate_best_func(self, best_func_keys):
+        difference_df = pd.DataFrame(self.train_df['x'])
+        # load ideal and train function and calculate differences
+        train_index = 1
 
-    def validate_best_func(self):
-        error_list = []
-        difference_df = pd.DataFrame()
-        mse = 0
-        mse_list = 0
-        mae = 0
-        mae_list = 0
-        for i in self.best_func:
-            x = 0
-            n = len(self.test_df.index)
-            while x < len(self.test_df.index):
+        for i in best_func_keys:
+            difference_df[f'train_y{train_index}'] = self.train_df[f'y{train_index}']
+            differences_list = []
+            for train_value, ideal_value in zip(self.train_df[f'y{train_index}'], self.ideal_df[i]):
+                difference_df[i] = self.ideal_df[i]
+                # Substract x from y and save the result with factor sqrt(2) into dataframe
+                differences_list.append((train_value - ideal_value) * math.sqrt(2))
 
-                x_pos = self.test_df.iloc[x]['x']
-                y_pos = self.test_df.iloc[x]['y']
+            difference_df[f'Diff_factor_{i}'] = pd.Series(differences_list)
+            train_index += 1
 
-                index_x_ideal = self.ideal_df.index[self.ideal_df.x == x_pos]
+        differences_index = 1
+        test_table_df = pd.DataFrame(self.test_df['x'])
+        test_difference_list = {}
+        test_difference_df = pd.DataFrame()
+        test_diff_consol = []
 
-                absolute_difference = y_pos - int(self.ideal_df.iloc[index_x_ideal][f'y{i}'])
-                data = {'x': [x_pos], 'y': [y_pos], 'delta': [absolute_difference], 'func': [f'y{i}']}
-                # difference_df = difference_df.append(pd.DataFrame(data), ignore_index=True)
-                mae_list += absolute_difference
-                mse_list += (absolute_difference)**2
-                #print(mse_list)
-                x += 1
-            mse = mse_list / n
-            rmse = np.sqrt(mse / n)
-            rse = np.sqrt(mse / (n - 2))
-            mae = mae_list / n
-            print(f'Func y{i}')
-            print('RSE =', rse)
-            print('RMSE =', rmse)
-            print('MAE =', mae)
-            print('MSE =', mse)
-            print('-------- \n')
-            # error_list.append(mse)
-            # if mse > check:
-            #     print('Failed!')
+        for x, t_test_value in zip(self.test_df['x'], self.test_df['y']):
+            index = difference_df[difference_df['x'] == x].index[0]
 
-        print(error_list)
-        return error_list
+            for i in best_func_keys:
+                y_ideal = self.ideal_df.iloc[index][i]
+                test_difference_list[x] = (y_ideal - t_test_value)
+                print(str((y_ideal - t_test_value)))
 
-    def show_best_func(self):
+            test_diff_consol.append(test_difference_list)
 
-        for i in self.best_func:
-            plt.plot(self.ideal_df[f'x'], self.ideal_df[f'y{i}'], label=f"ideal y{i}")
-        plt.xlabel('x - axis')
-        plt.ylabel('y - axis')
-        plt.legend()
-        # plt.show()
-
-        for i in self.train_df.columns.tolist()[1:]:
-            plt.plot(self.train_df[f'x'], self.train_df[f'y{i}'], label=f"train y{i}")
-        plt.xlabel('x - axis')
-        plt.ylabel('y - axis')
-        plt.legend()
-        # plt.show()
-
+            test_difference_df[f'diff_ideal_' + str(i) + str(x)] = pd.Series(test_difference_list)
+        df = pd.DataFrame(test_diff_consol)
+        print('Test')

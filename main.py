@@ -15,6 +15,9 @@ if __name__ == "__main__":
     #graph.plot_data(data_list['test'], multiple_y=False)
 
     model = model.Model(data_list)
-    model.validate_best_func()
+    keys = model.get_best_functions()
+    model.validate_best_func(best_func_keys=keys)
+
+    #model.validate_best_func()
 
 
