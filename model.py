@@ -72,18 +72,16 @@ class Model:
         test_table_df = pd.DataFrame(self.test_df['x'])
         test_difference_list = {}
         test_difference_df = pd.DataFrame()
-        test_diff_consol = []
-
+        test_diff_consol = {}
+        update_dict = {}
         for x, t_test_value in zip(self.test_df['x'], self.test_df['y']):
             index = difference_df[difference_df['x'] == x].index[0]
 
             for i in best_func_keys:
                 y_ideal = self.ideal_df.iloc[index][i]
-                test_difference_list[x] = (y_ideal - t_test_value)
+                test_difference_list[i] = (y_ideal - t_test_value)
                 print(str((y_ideal - t_test_value)))
 
-            test_diff_consol.append(test_difference_list)
-
-            test_difference_df[f'diff_ideal_' + str(i) + str(x)] = pd.Series(test_difference_list)
+            test_difference_df[f'diff_ideal_' + str(x)] = pd.Series(test_difference_list)
         df = pd.DataFrame(test_diff_consol)
         print('Test')
