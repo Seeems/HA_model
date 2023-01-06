@@ -1,10 +1,6 @@
 import math
-
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import graph
-from sklearn.metrics import mean_absolute_error
 
 
 class Model:
@@ -53,7 +49,7 @@ class Model:
         return best_func_keys
 
     def validate_best_func(self, best_func_keys):
-        difference_df = pd.DataFrame(self.train_df['x'])
+        difference_df = pd.DataFrame(self.train_df['x'].round(1))
         # load ideal and train function and calculate differences
         train_index = 1
 
@@ -63,25 +59,55 @@ class Model:
             for train_value, ideal_value in zip(self.train_df[f'y{train_index}'], self.ideal_df[i]):
                 difference_df[i] = self.ideal_df[i]
                 # Substract x from y and save the result with factor sqrt(2) into dataframe
-                differences_list.append((train_value - ideal_value) * math.sqrt(2))
+                differences_list.append(abs(train_value - ideal_value) * math.sqrt(2))
 
             difference_df[f'Diff_factor_{i}'] = pd.Series(differences_list)
             train_index += 1
 
-        differences_index = 1
         test_table_df = pd.DataFrame(self.test_df['x'])
         test_difference_list = {}
         test_difference_df = pd.DataFrame()
-        test_diff_consol = {}
-        update_dict = {}
+
+        idx = 0
         for x, t_test_value in zip(self.test_df['x'], self.test_df['y']):
             index = difference_df[difference_df['x'] == x].index[0]
 
+
             for i in best_func_keys:
                 y_ideal = self.ideal_df.iloc[index][i]
-                test_difference_list[i] = (y_ideal - t_test_value)
-                print(str((y_ideal - t_test_value)))
+                test_difference_list[i] = abs(y_ideal - t_test_value)
 
-            test_difference_df[f'diff_ideal_' + str(x)] = pd.Series(test_difference_list)
-        df = pd.DataFrame(test_diff_consol)
-        print('Test')
+            test_difference_df[f'{str(idx)}_{str(x)}'] = pd.Series(test_difference_list)
+            idx += 1
+
+        test_difference_df = test_difference_df.transpose()
+        test_table_df['Y1'] = self.test_df['y']
+
+        # Initialize lists of delta Y and number of ideal function
+        deltas = []
+        ideal_func = []
+        # Get each row of test_difference_df
+        # index = x; row = Differences between Test Y and Ideal Functions
+        for index, row in test_difference_df.iterrows():
+
+            # Find minimum difference
+            min_idx = row.idxmin()
+            test_diff_value = float(test_difference_df.loc[index][min_idx])
+
+            #Get x value from ColumnName
+            x_value = float(index.split('_')[1])
+
+            # Get difference value of Train & Ideal in order to compare both values
+            compare_value = float(difference_df.loc[difference_df['x'] == x_value, f'Diff_factor_{min_idx}'])
+
+            if test_diff_value < compare_value:
+                deltas.append(test_diff_value)
+                ideal_func.append(min_idx)
+            else:
+                deltas.append(None)
+                ideal_func.append(None)
+
+        test_table_df['Delta Y'] = deltas
+        test_table_df['Nummer der idealen Funktion'] = ideal_func
+
+        return test_table_df
