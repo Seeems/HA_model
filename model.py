@@ -17,6 +17,7 @@ class Model:
     Misc variables:
         none
     """
+
     def __init__(self, data):
         self.ideal_df = data['ideal']
         self.test_df = data['test']
@@ -35,7 +36,6 @@ class Model:
             ideal_iterator = 1
 
             while ideal_iterator <= (len(self.ideal_df.columns) - 2):
-
                 # Get sum of all squared errors
                 error_dict[f'{ideal_iterator}'] = np.sum(
                     (self.train_df[f'y{train_iterator}'] - self.ideal_df[f'y{ideal_iterator}']) ** 2)
@@ -72,7 +72,6 @@ class Model:
         for x, t_test_value in zip(self.test_df['x'], self.test_df['y']):
             index = difference_df[difference_df['x'] == x].index[0]
 
-
             for i in best_func_keys:
                 y_ideal = self.ideal_df.iloc[index][i]
                 test_difference_list[i] = abs(y_ideal - t_test_value)
@@ -94,7 +93,7 @@ class Model:
             min_idx = row.idxmin()
             test_diff_value = float(test_difference_df.loc[index][min_idx])
 
-            #Get x value from ColumnName
+            # Get x value from ColumnName
             x_value = float(index.split('_')[1])
 
             # Get difference value of Train & Ideal in order to compare both values
