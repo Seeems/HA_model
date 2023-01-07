@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import data_manager
 import graph
 import model
+import analytics
 
 
 if __name__ == "__main__":
@@ -14,6 +15,8 @@ if __name__ == "__main__":
     model = model.Model(data_list)
     keys = model.get_best_func()
     test_table = model.validate_best_func(best_func_keys=keys)
+
+    analytics.Analyzer(data_list, test_table)
 
 
     graph.plot_data(data_list['ideal'], label='Ideal Functions', multiple_y=True)

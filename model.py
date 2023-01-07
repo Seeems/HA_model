@@ -129,3 +129,11 @@ class Model:
         test_table_df['Nummer der idealen Funktion'] = ideal_func
 
         return test_table_df
+
+    def test_table_transformation(self, test_table_df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Transform test table data into ideal dataframe structure for plotting.
+        :param test_table_df: DataFrame, table 3 structure from exercise sheet
+        :return test_values_func: DataFrame, test values with a specific ideal function
+        :return test_values_nan: DataFrame, test values without a specific ideal function
+        """
