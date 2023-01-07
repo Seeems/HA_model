@@ -2,3 +2,191 @@
 2023-01-07 12:49:26,663 - INFO - test table already exists
 2023-01-07 12:49:26,670 - INFO - ideal table already exists
 2023-01-07 12:49:26,672 - INFO - train table already exists
+2023-01-07 15:03:07,357 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:03:07,406 - INFO - test table already exists
+2023-01-07 15:03:07,417 - INFO - ideal table already exists
+2023-01-07 15:03:07,421 - INFO - train table already exists
+2023-01-07 15:06:43,737 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:06:43,782 - INFO - test table already exists
+2023-01-07 15:06:43,794 - INFO - ideal table already exists
+2023-01-07 15:06:43,799 - INFO - train table already exists
+2023-01-07 15:07:20,247 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:07:20,257 - INFO - test table already exists
+2023-01-07 15:07:20,267 - INFO - ideal table already exists
+2023-01-07 15:07:20,270 - INFO - train table already exists
+2023-01-07 15:09:16,359 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:09:16,364 - INFO - test table already exists
+2023-01-07 15:09:16,373 - INFO - ideal table already exists
+2023-01-07 15:09:16,376 - INFO - train table already exists
+2023-01-07 15:10:12,813 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:10:12,820 - INFO - test table already exists
+2023-01-07 15:10:12,827 - INFO - ideal table already exists
+2023-01-07 15:10:12,831 - INFO - train table already exists
+2023-01-07 15:10:52,179 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:10:52,184 - INFO - test table already exists
+2023-01-07 15:10:52,191 - INFO - ideal table already exists
+2023-01-07 15:10:52,194 - INFO - train table already exists
+2023-01-07 15:13:00,820 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:13:00,850 - INFO - test table already exists
+2023-01-07 15:13:00,859 - INFO - ideal table already exists
+2023-01-07 15:13:00,863 - INFO - train table already exists
+2023-01-07 15:13:20,487 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:13:20,493 - INFO - test table already exists
+2023-01-07 15:13:20,506 - INFO - ideal table already exists
+2023-01-07 15:13:20,509 - INFO - train table already exists
+2023-01-07 15:13:44,347 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:13:44,355 - INFO - test table already exists
+2023-01-07 15:13:44,363 - INFO - ideal table already exists
+2023-01-07 15:13:44,367 - INFO - train table already exists
+2023-01-07 15:14:15,983 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:14:15,988 - INFO - test table already exists
+2023-01-07 15:14:15,995 - INFO - ideal table already exists
+2023-01-07 15:14:15,997 - INFO - train table already exists
+2023-01-07 15:14:29,877 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:14:29,881 - INFO - test table already exists
+2023-01-07 15:14:29,889 - INFO - ideal table already exists
+2023-01-07 15:14:29,891 - INFO - train table already exists
+2023-01-07 15:14:47,923 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:14:47,927 - INFO - test table already exists
+2023-01-07 15:14:47,935 - INFO - ideal table already exists
+2023-01-07 15:14:47,937 - INFO - train table already exists
+2023-01-07 15:14:57,180 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:14:57,184 - INFO - test table already exists
+2023-01-07 15:14:57,191 - INFO - ideal table already exists
+2023-01-07 15:14:57,193 - INFO - train table already exists
+2023-01-07 15:15:32,652 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:15:32,657 - INFO - test table already exists
+2023-01-07 15:15:32,664 - INFO - ideal table already exists
+2023-01-07 15:15:32,666 - INFO - train table already exists
+2023-01-07 15:16:29,916 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:16:29,923 - INFO - test table already exists
+2023-01-07 15:16:29,931 - INFO - ideal table already exists
+2023-01-07 15:16:29,934 - INFO - train table already exists
+2023-01-07 15:16:55,834 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:16:55,841 - INFO - test table already exists
+2023-01-07 15:16:55,850 - INFO - ideal table already exists
+2023-01-07 15:16:55,853 - INFO - train table already exists
+2023-01-07 15:17:41,011 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:17:41,018 - INFO - test table already exists
+2023-01-07 15:17:41,027 - INFO - ideal table already exists
+2023-01-07 15:17:41,030 - INFO - train table already exists
+2023-01-07 15:17:52,574 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:17:52,578 - INFO - test table already exists
+2023-01-07 15:17:52,587 - INFO - ideal table already exists
+2023-01-07 15:17:52,589 - INFO - train table already exists
+2023-01-07 15:18:45,964 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:18:45,972 - INFO - test table already exists
+2023-01-07 15:18:45,980 - INFO - ideal table already exists
+2023-01-07 15:18:45,984 - INFO - train table already exists
+2023-01-07 15:21:21,678 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:21:21,685 - INFO - test table already exists
+2023-01-07 15:21:21,693 - INFO - ideal table already exists
+2023-01-07 15:21:21,696 - INFO - train table already exists
+2023-01-07 15:25:37,929 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:25:37,950 - INFO - test table already exists
+2023-01-07 15:25:37,959 - INFO - ideal table already exists
+2023-01-07 15:25:37,962 - INFO - train table already exists
+2023-01-07 15:26:58,443 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:26:58,450 - INFO - test table already exists
+2023-01-07 15:26:58,459 - INFO - ideal table already exists
+2023-01-07 15:26:58,462 - INFO - train table already exists
+2023-01-07 15:27:57,999 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:27:58,007 - INFO - test table already exists
+2023-01-07 15:27:58,015 - INFO - ideal table already exists
+2023-01-07 15:27:58,017 - INFO - train table already exists
+2023-01-07 15:28:23,808 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:28:23,816 - INFO - test table already exists
+2023-01-07 15:28:23,823 - INFO - ideal table already exists
+2023-01-07 15:28:23,826 - INFO - train table already exists
+2023-01-07 15:29:09,441 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:29:09,449 - INFO - test table already exists
+2023-01-07 15:29:09,458 - INFO - ideal table already exists
+2023-01-07 15:29:09,461 - INFO - train table already exists
+2023-01-07 15:29:28,799 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:29:28,807 - INFO - test table already exists
+2023-01-07 15:29:28,817 - INFO - ideal table already exists
+2023-01-07 15:29:28,820 - INFO - train table already exists
+2023-01-07 15:31:50,641 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:31:50,688 - INFO - test table already exists
+2023-01-07 15:31:50,705 - INFO - ideal table already exists
+2023-01-07 15:31:50,708 - INFO - train table already exists
+2023-01-07 15:38:31,968 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:38:32,003 - INFO - test table already exists
+2023-01-07 15:38:32,012 - INFO - ideal table already exists
+2023-01-07 15:38:32,015 - INFO - train table already exists
+2023-01-07 15:38:56,580 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:38:56,601 - INFO - test table already exists
+2023-01-07 15:38:56,609 - INFO - ideal table already exists
+2023-01-07 15:38:56,612 - INFO - train table already exists
+2023-01-07 15:42:29,138 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:42:29,176 - INFO - test table already exists
+2023-01-07 15:42:29,189 - INFO - ideal table already exists
+2023-01-07 15:42:29,193 - INFO - train table already exists
+2023-01-07 15:43:25,729 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:43:25,746 - INFO - test table already exists
+2023-01-07 15:43:25,759 - INFO - ideal table already exists
+2023-01-07 15:43:25,764 - INFO - train table already exists
+2023-01-07 15:44:15,552 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:44:15,597 - INFO - test table already exists
+2023-01-07 15:44:15,610 - INFO - ideal table already exists
+2023-01-07 15:44:15,616 - INFO - train table already exists
+2023-01-07 15:44:37,183 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:44:37,191 - INFO - test table already exists
+2023-01-07 15:44:37,205 - INFO - ideal table already exists
+2023-01-07 15:44:37,212 - INFO - train table already exists
+2023-01-07 15:45:44,972 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:45:44,983 - INFO - test table already exists
+2023-01-07 15:45:44,995 - INFO - ideal table already exists
+2023-01-07 15:45:44,999 - INFO - train table already exists
+2023-01-07 15:46:31,905 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:46:31,915 - INFO - test table already exists
+2023-01-07 15:46:31,924 - INFO - ideal table already exists
+2023-01-07 15:46:31,927 - INFO - train table already exists
+2023-01-07 15:47:02,404 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:47:02,408 - INFO - test table already exists
+2023-01-07 15:47:02,415 - INFO - ideal table already exists
+2023-01-07 15:47:02,417 - INFO - train table already exists
+2023-01-07 15:48:46,070 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:48:46,084 - INFO - test table already exists
+2023-01-07 15:48:46,092 - INFO - ideal table already exists
+2023-01-07 15:48:46,094 - INFO - train table already exists
+2023-01-07 15:53:36,708 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:53:36,737 - INFO - test table already exists
+2023-01-07 15:53:36,751 - INFO - ideal table already exists
+2023-01-07 15:53:36,755 - INFO - train table already exists
+2023-01-07 15:54:55,801 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:54:55,825 - INFO - test table already exists
+2023-01-07 15:54:55,837 - INFO - ideal table already exists
+2023-01-07 15:54:55,841 - INFO - train table already exists
+2023-01-07 15:55:17,474 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:55:17,481 - INFO - test table already exists
+2023-01-07 15:55:17,491 - INFO - ideal table already exists
+2023-01-07 15:55:17,494 - INFO - train table already exists
+2023-01-07 15:56:55,513 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:56:55,524 - INFO - test table already exists
+2023-01-07 15:56:55,535 - INFO - ideal table already exists
+2023-01-07 15:56:55,540 - INFO - train table already exists
+2023-01-07 15:59:12,680 - INFO - Initializing database. Checking if database exists.
+2023-01-07 15:59:12,713 - INFO - test table already exists
+2023-01-07 15:59:12,725 - INFO - ideal table already exists
+2023-01-07 15:59:12,729 - INFO - train table already exists
+2023-01-07 16:00:22,382 - INFO - Initializing database. Checking if database exists.
+2023-01-07 16:00:22,407 - INFO - test table already exists
+2023-01-07 16:00:22,419 - INFO - ideal table already exists
+2023-01-07 16:00:22,423 - INFO - train table already exists
+2023-01-07 16:01:20,401 - INFO - Initializing database. Checking if database exists.
+2023-01-07 16:01:20,411 - INFO - test table already exists
+2023-01-07 16:01:20,425 - INFO - ideal table already exists
+2023-01-07 16:01:20,429 - INFO - train table already exists
+2023-01-07 16:05:08,088 - INFO - Initializing database. Checking if database exists.
+2023-01-07 16:05:08,105 - INFO - test table already exists
+2023-01-07 16:05:08,113 - INFO - ideal table already exists
+2023-01-07 16:05:08,116 - INFO - train table already exists
+2023-01-07 16:09:49,248 - INFO - Initializing database. Checking if database exists.
+2023-01-07 16:09:49,271 - INFO - test table already exists
+2023-01-07 16:09:49,280 - INFO - ideal table already exists
+2023-01-07 16:09:49,284 - INFO - train table already exists
+2023-01-07 16:10:03,872 - INFO - Initializing database. Checking if database exists.
+2023-01-07 16:10:03,879 - INFO - test table already exists
+2023-01-07 16:10:03,888 - INFO - ideal table already exists
+2023-01-07 16:10:03,892 - INFO - train table already exists

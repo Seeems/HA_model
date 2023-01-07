@@ -17,6 +17,7 @@ PROJECT_LOCATION = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(PROJECT_LOCATION, 'config.json'), 'r') as file:
     CONFIG = json.load(file)
 
+
 # Class Manager for whole data management. CSV and Database operations
 class Manager(object):
     """

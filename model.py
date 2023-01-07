@@ -1,6 +1,9 @@
 import math
+from typing import Tuple, Any
+
 import numpy as np
 import pandas as pd
+from pandas import DataFrame
 
 
 class Model:
@@ -56,12 +59,13 @@ class Model:
             train_iterator += 1
         return best_func_keys
 
-    def validate_best_func(self, best_func_keys: list) -> pd.DataFrame:
+    def validate_best_func(self, best_func_keys: list, diff: str) -> pd.DataFrame:
         """
         Validate best function with test values and calculate difference. Returns a dataframe of test values and
         given difference of best ideal func if difference is smaller then the difference
         between train and test factorized by sqrt(2).
         :param best_func_keys: list, List of best functions which are evaluated by get_best_func() Method
+        :param diff: string, diff=ms will take mean squared difference for validation
         :return: test_table_df: pd.Dataframe, Data of test table
         """
         difference_df = pd.DataFrame(self.train_df['x'].round(1))
@@ -90,7 +94,7 @@ class Model:
 
             for i in best_func_keys:
                 y_ideal = self.ideal_df.iloc[index][i]
-                test_difference_list[i] = abs(y_ideal - t_test_value)
+                test_difference_list[i] = math.sqrt(abs(y_ideal - t_test_value))
 
             test_difference_df[f'{str(idx)}_{str(x)}'] = pd.Series(test_difference_list)
             idx += 1
@@ -114,9 +118,13 @@ class Model:
             # Get x value from ColumnName
             x_value = float(index.split('_')[1])
 
-            # Get difference value of Train & Ideal in order to compare both values
-            compare_value = float(difference_df.loc[difference_df['x'] == x_value, f'Diff_factor_{min_idx}'])
+            # Get mean squared difference value of Train & Ideal in order to compare both values
+            if diff == 'ms':
+                compare_value = float((difference_df[f'Diff_factor_{min_idx}'].sum()**2)/len(difference_df[f'Diff_factor_{min_idx}']))
+            else:
+                compare_value = float(difference_df.loc[difference_df['x'] == x_value, f'Diff_factor_{min_idx}'])
 
+            # Compare if test_diff_value is lower than mean squared difference
             if test_diff_value < compare_value:
                 deltas.append(test_diff_value)
                 ideal_func.append(min_idx)
@@ -129,11 +137,3 @@ class Model:
         test_table_df['Nummer der idealen Funktion'] = ideal_func
 
         return test_table_df
-
-    def test_table_transformation(self, test_table_df: pd.DataFrame) -> pd.DataFrame:
-        """
-        Transform test table data into ideal dataframe structure for plotting.
-        :param test_table_df: DataFrame, table 3 structure from exercise sheet
-        :return test_values_func: DataFrame, test values with a specific ideal function
-        :return test_values_nan: DataFrame, test values without a specific ideal function
-        """
