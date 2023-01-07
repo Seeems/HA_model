@@ -5,7 +5,7 @@ import seaborn as sns
 
 import data_manager
 
-def plot_data(df, multiple_y=True):
+def plot_data(df, label=None, multiple_y=True):
     i = 0
     x = 0
     v = 1
@@ -20,7 +20,7 @@ def plot_data(df, multiple_y=True):
 
                 i += 1
                 v += 1
-            fig.suptitle('Ideal Functions', fontsize=14)
+            fig.suptitle(label, fontsize=14)
             plt.draw()
             plt.show()
             x += 1
@@ -28,7 +28,7 @@ def plot_data(df, multiple_y=True):
 
     else:
 
-        plt.scatter(df[f'x'], df['y'], label='Test Data')
+        plt.scatter(df[f'x'], df['y'], label=label)
         plt.xlabel('x - axis')
         plt.ylabel('y - axis')
         plt.legend()

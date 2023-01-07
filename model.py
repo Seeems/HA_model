@@ -11,20 +11,28 @@ class Model:
         Model
 
     Functions:
-        initialize_database(directory_path: str = PROJECT_LOCATION)
-        database_modification()
-
-    Misc variables:
-        none
+        get_best_func() -> list
+        validate_best_func(list) -> pd.DataFrame
     """
 
     def __init__(self, data):
+        """
+        Initialize class with needed variables of tables
+        :param data: Dict, Contains Dictonary of table Dataframes
+        :var ideal_df: Takes the data of ideal functions
+        :var test_df: Takes the data of test values
+        :var train_df: Takes the data of given train functions
+        """
         self.ideal_df = data['ideal']
         self.test_df = data['test']
         self.train_df = data['train']
 
-    def get_best_functions(self):
-        """:type
+    def get_best_func(self) -> list:
+        """
+        Compares the ideal functions to the train functions by minimum sum of squared differences
+        and returns the names of ideal functions that best describe the train data.
+
+        :return: best_func_keys: list, names of ideal functions which best describe the train data
         """
         best_func_keys = []
         error_dict = {}
@@ -48,7 +56,14 @@ class Model:
             train_iterator += 1
         return best_func_keys
 
-    def validate_best_func(self, best_func_keys):
+    def validate_best_func(self, best_func_keys: list) -> pd.DataFrame:
+        """
+        Validate best function with test values and calculate difference. Returns a dataframe of test values and
+        given difference of best ideal func if difference is smaller then the difference
+        between train and test factorized by sqrt(2).
+        :param best_func_keys: list, List of best functions which are evaluated by get_best_func() Method
+        :return: test_table_df: pd.Dataframe, Data of test table
+        """
         difference_df = pd.DataFrame(self.train_df['x'].round(1))
         # load ideal and train function and calculate differences
         train_index = 1
@@ -67,8 +82,9 @@ class Model:
         test_table_df = pd.DataFrame(self.test_df['x'])
         test_difference_list = {}
         test_difference_df = pd.DataFrame()
-
         idx = 0
+
+        # calculate difference between ideal function and test[y]
         for x, t_test_value in zip(self.test_df['x'], self.test_df['y']):
             index = difference_df[difference_df['x'] == x].index[0]
 
@@ -79,12 +95,14 @@ class Model:
             test_difference_df[f'{str(idx)}_{str(x)}'] = pd.Series(test_difference_list)
             idx += 1
 
+        # Transform dataframe regarding given data structure (table 3 in exercise sheet)
         test_difference_df = test_difference_df.transpose()
         test_table_df['Y1'] = self.test_df['y']
 
         # Initialize lists of delta Y and number of ideal function
         deltas = []
         ideal_func = []
+
         # Get each row of test_difference_df
         # index = x; row = Differences between Test Y and Ideal Functions
         for index, row in test_difference_df.iterrows():
@@ -106,6 +124,7 @@ class Model:
                 deltas.append(None)
                 ideal_func.append(None)
 
+        # Transform dataframe regarding given data structure (table 3 in exercise sheet)
         test_table_df['Delta Y'] = deltas
         test_table_df['Nummer der idealen Funktion'] = ideal_func
 

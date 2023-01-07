@@ -28,11 +28,12 @@ class Manager(object):
         Manager
 
     Functions:
-        initialize_database(directory_path: str = PROJECT_LOCATION)
-        database_modification()
+        initialize_database(string)
+        load_data() -> Dictionary
 
     Misc variables:
         PROJECT_LOCATION
+        CONFIG
     """
 
     def __init__(self):
@@ -60,7 +61,7 @@ class Manager(object):
         Initialization of the database with all data files. Execution at initialization of class object.
 
         :param directory_path: string, default set to PROJECT_LOCATION
-        :return:
+        :return: None
         """
         self.logger.info("Initializing database. Checking if database exists.")
 
@@ -105,7 +106,6 @@ class Manager(object):
         # Initialize needed table names and dictionary
         table_list = self.meta.tables.keys()
         df_dict = {}
-        tables = CONFIG['TABLES']
 
         for table in table_list:
 
@@ -120,6 +120,5 @@ class Manager(object):
             except MissingTableException:
                 self.logger.warning(f'{table} do not exists. Stopping program...')
                 exit(1)
-
 
         return df_dict
