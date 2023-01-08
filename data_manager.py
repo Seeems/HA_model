@@ -123,3 +123,13 @@ class Manager(object):
                 exit(1)
 
         return df_dict
+
+    def write_to_db(self, table: pd.DataFrame, name: str):
+        """
+        Write given dataframe to database
+        :param name: string, Name of new table
+        :param table: DataFrame, Data of new table
+        :return: None
+        """
+        table.to_sql(f'{name}', self.db, if_exists='replace', index=True)
+        self.logger.info(f'{name} table creation successfully')

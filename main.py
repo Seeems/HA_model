@@ -24,6 +24,8 @@ if __name__ == "__main__":
 
     test_values_nan = test_table[test_table['Delta Y'].isna()]
     test_values_func = test_table[test_table['Delta Y'].notnull()]
+    
+    manager.write_to_db(test_table, 'Test-Data-Validated')
 
     graph.plot_data(data_list['ideal'], label='Ideal Functions', multiple_y=True, key='ideal')
     graph.plot_data(data_list['test'], label='Test Data', multiple_y=False)
