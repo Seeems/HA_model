@@ -12,6 +12,9 @@ if __name__ == "__main__":
 
     diff_calc = input('Enter "ms" for mean squared difference')
 
+    if diff_calc != 'ms':
+        diff_calc = None
+
     model = model.Model(data_list)
     keys = model.get_best_func()
     test_table = model.validate_best_func(diff=diff_calc, best_func_keys=keys)
