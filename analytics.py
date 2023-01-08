@@ -29,12 +29,17 @@ class Analyzer(Model):
         percentage = (rate/df_length)*100
         difference_mean = self.test_table_df['Delta Y'].mean()
 
-        self.logger.info(f'{rate} of {df_length}')
-        self.logger.info(f'{percentage}%')
-        self.logger.info(f'{difference_mean}')
+        self.logger.info(f'Validated Data - Hits: {rate} of {df_length}')
+        self.logger.info(f'Validated Data - HitRate: {percentage}%')
+        self.logger.info(f'Validated Data - Mean: {difference_mean}')
+        print('----------------Analytics-------------------')
+        print(f'Train Data Shape: {train_df.shape}')
+        print(f'Ideal Data Shape: {ideal_df.shape}')
+        print(f'Test Data Shape: {test_df.shape}')
+        print('--------------------------------------------')
         print(f'Test difference lower than train difference which is factorized with sqrt(2)')
         print(f'{rate} of {df_length}')
         print(f'{percentage}%')
         print(f'{difference_mean}')
 
-        return
+        return True

@@ -1,6 +1,4 @@
 import unittest
-import random
-
 from data_manager import Manager
 from model import Model
 
@@ -22,12 +20,3 @@ class UnitTestModel(unittest.TestCase):
         else:
             check_var = False
         self.assertTrue(check_var, f'The List {str(list_keys)} should contain some functions from y1 to y50')
-
-    def test_validate_best_func(self):
-        manager = Manager()
-        data_list = manager.load_data()
-        model = Model(data_list)
-
-        #self.assertEqual()
-        #def validate_best_func(self, best_func_keys: list, diff: str) -> pd.DataFrame:
-
