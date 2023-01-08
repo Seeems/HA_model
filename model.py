@@ -1,9 +1,7 @@
 import math
-from typing import Tuple, Any
-
+import setup_logger
 import numpy as np
 import pandas as pd
-from pandas import DataFrame
 
 
 class Model:
@@ -21,7 +19,7 @@ class Model:
     def __init__(self, data):
         """
         Initialize class with needed variables of tables
-        :param data: Dict, Contains Dictonary of table Dataframes
+        :param data: Dict, Contains Dictionary of table Dataframes
         :var ideal_df: Takes the data of ideal functions
         :var test_df: Takes the data of test values
         :var train_df: Takes the data of given train functions
@@ -29,6 +27,7 @@ class Model:
         self.ideal_df = data['ideal']
         self.test_df = data['test']
         self.train_df = data['train']
+        self.logger = setup_logger.setup('model')
 
     def get_best_func(self) -> list:
         """
@@ -57,6 +56,7 @@ class Model:
             best_ideal = {k: v for k, v in sorted(error_dict.items(), key=lambda item: item[1])}
             best_func_keys.append(f'y{list(best_ideal.keys())[0]}')
             train_iterator += 1
+        self.logger.info(f'Successfully found best ideal functions')
         return best_func_keys
 
     def validate_best_func(self, best_func_keys: list, diff: str) -> pd.DataFrame:
@@ -135,5 +135,5 @@ class Model:
         # Transform dataframe regarding given data structure (table 3 in exercise sheet)
         test_table_df['Delta Y'] = deltas
         test_table_df['Nummer der idealen Funktion'] = ideal_func
-
+        self.logger.info('Successfully validated data')
         return test_table_df

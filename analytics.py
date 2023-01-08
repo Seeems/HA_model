@@ -36,3 +36,5 @@ class Analyzer(Model):
         print(f'{rate} of {df_length}')
         print(f'{percentage}%')
         print(f'{difference_mean}')
+
+        return
