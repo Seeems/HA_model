@@ -14,11 +14,10 @@ def setup(name: str, level: int = logging.INFO) -> logging.Logger:
     OUTPUT:
     logger: logging.Logger -> New created Logger
     """
-
-    if not os.path.exists('HA_model/logs'):
-        os.makedirs('HA_model/logs')
-
-    handler = logging.FileHandler(os.path.join('HA_model/logs/', name) + '.log')
+    path = os.path.dirname(os.path.realpath(__file__)) + '/logs'
+    if not os.path.exists(path):
+        os.makedirs(path + '/logs')
+    handler = logging.FileHandler(os.path.join(path, name) + '.log')
     handler.setFormatter(formatter)
 
     logger = logging.getLogger(name)

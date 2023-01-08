@@ -190,3 +190,7 @@
 2023-01-07 16:10:03,879 - INFO - test table already exists
 2023-01-07 16:10:03,888 - INFO - ideal table already exists
 2023-01-07 16:10:03,892 - INFO - train table already exists
+2023-01-08 17:48:37,079 - INFO - Initializing database. Checking if database exists.
+2023-01-08 17:48:37,116 - INFO - test table already exists
+2023-01-08 17:48:37,130 - INFO - ideal table already exists
+2023-01-08 17:48:37,133 - INFO - train table already exists
