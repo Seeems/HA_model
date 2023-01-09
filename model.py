@@ -52,7 +52,7 @@ class Model:
 
                 ideal_iterator += 1
 
-            # Get minimal error of least squared error and save in ordered list
+            # Get minimal error of the least squared error and save in ordered list
             best_ideal = {k: v for k, v in sorted(error_dict.items(), key=lambda item: item[1])}
             best_func_keys.append(f'y{list(best_ideal.keys())[0]}')
             train_iterator += 1
@@ -62,7 +62,7 @@ class Model:
     def validate_best_func(self, best_func_keys: list, diff: str) -> pd.DataFrame:
         """
         Validate best function with test values and calculate difference. Returns a dataframe of test values and
-        given difference of best ideal func if difference is smaller then the difference
+        given difference of the best ideal func if difference is smaller than the difference
         between train and test factorized by sqrt(2).
         :param best_func_keys: list, List of best functions which are evaluated by get_best_func() Method
         :param diff: string, diff=ms will take mean squared difference for validation

@@ -8,7 +8,7 @@ import sqlalchemy_utils
 import pandas as pd
 
 # --------- GLOBAL VARIABLES ----------------
-# Project loaction for a variable execution location
+# Project location for a variable execution location
 # Data tables of database in order to prevent SQL injection
 PROJECT_LOCATION = os.path.dirname(os.path.abspath(__file__))
 
