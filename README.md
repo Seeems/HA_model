@@ -7,9 +7,6 @@ Die Datengrundlage wird aus den drei CSV Dateien gebildet. Diese Daten werden vo
 ## Ordnerstruktur
 ```bash
 .
-├── HA_model
-│   └── logs
-│       └── data_manager.log
 ├── README.md
 ├── analytics.py
 ├── config.json
@@ -23,11 +20,12 @@ Die Datengrundlage wird aus den drei CSV Dateien gebildet. Diese Daten werden vo
 ├── graph.py
 ├── logs
 │   ├── analytics.log
-│   └── data_manager.log
+│   ├── data_manager.log
+│   └── model.log
 ├── main.py
 ├── model.py
 ├── setup_logger.py
-├── test_data_manager.py
+├── test_analytics.py
 └── test_model.py
 ```
 
