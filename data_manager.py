@@ -135,5 +135,6 @@ class Manager(object):
         :param table: DataFrame, Data of new table
         :return: None
         """
+        # Create table with validated test data
         table.to_sql(f'{name}', self.db, if_exists='replace', index=True)
         self.logger.info(f'{name} table creation successfully')
