@@ -228,3 +228,8 @@
 2023-01-11 16:29:06,469 - INFO - ideal table already exists
 2023-01-11 16:29:06,473 - INFO - train table already exists
 2023-01-11 16:29:10,014 - INFO - Test-Data-Validated table creation successfully
+2023-01-11 16:36:42,314 - INFO - Initializing database. Checking if database exists.
+2023-01-11 16:36:42,334 - INFO - test table already exists
+2023-01-11 16:36:42,341 - INFO - ideal table already exists
+2023-01-11 16:36:42,344 - INFO - train table already exists
+2023-01-11 16:36:42,690 - INFO - Test-Data-Validated table creation successfully
