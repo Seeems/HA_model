@@ -233,3 +233,17 @@
 2023-01-11 16:36:42,341 - INFO - ideal table already exists
 2023-01-11 16:36:42,344 - INFO - train table already exists
 2023-01-11 16:36:42,690 - INFO - Test-Data-Validated table creation successfully
+2023-01-11 17:49:07,782 - INFO - Initializing database. Checking if database exists.
+2023-01-11 17:49:07,819 - INFO - test table already exists
+2023-01-11 17:49:07,831 - INFO - ideal table already exists
+2023-01-11 17:49:07,835 - INFO - train table already exists
+2023-01-11 17:54:36,926 - INFO - Initializing database. Checking if database exists.
+2023-01-11 17:54:36,951 - INFO - test table already exists
+2023-01-11 17:54:36,959 - INFO - ideal table already exists
+2023-01-11 17:54:36,961 - INFO - train table already exists
+2023-01-11 17:54:37,284 - INFO - Test-Data-Validated table creation successfully
+2023-01-11 17:58:02,550 - INFO - Initializing database. Checking if database exists.
+2023-01-11 17:58:02,563 - INFO - test table already exists
+2023-01-11 17:58:02,570 - INFO - ideal table already exists
+2023-01-11 17:58:02,572 - INFO - train table already exists
+2023-01-11 17:58:02,835 - INFO - Test-Data-Validated table creation successfully

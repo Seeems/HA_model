@@ -40,7 +40,7 @@ class Analyzer(Model):
         print(f'Ideal Data Shape: {self.ideal_df.shape}')
         print(f'Test Data Shape: {self.test_df.shape}')
         print('--------------------------------------------')
-        print(f'Test difference lower than train difference which is factorized by sqrt(2)')
+        print(f'Test difference lower than sqrt(2)')
         print(f'{rate} of {df_length}')
         print(f'{percentage}%')
         print(f'{difference_mean}')

@@ -71,18 +71,6 @@ class Model:
         # load ideal and train function and calculate differences
         train_index = 1
 
-        for i in best_func_keys:
-            difference_df[f'train_y{train_index}'] = self.train_df[f'y{train_index}']
-            differences_list = []
-            for train_value, ideal_value in zip(self.train_df[f'y{train_index}'], self.ideal_df[i]):
-                difference_df[i] = self.ideal_df[i]
-                # Substract x from y and save the result with factor sqrt(2) into dataframe
-                # differences_list.append(abs(train_value - ideal_value) * math.sqrt(2))
-                differences_list.append(math.sqrt(2))
-
-            difference_df[f'Diff_factor_{i}'] = pd.Series(differences_list)
-            train_index += 1
-
         test_table_df = pd.DataFrame(self.test_df['x'])
         test_difference_list = {}
         test_difference_df = pd.DataFrame()
@@ -94,7 +82,7 @@ class Model:
 
             for i in best_func_keys:
                 y_ideal = self.ideal_df.iloc[index][i]
-                test_difference_list[i] = math.sqrt(abs(y_ideal - t_test_value))
+                test_difference_list[i] = abs(y_ideal - t_test_value)
 
             test_difference_df[f'{str(idx)}_{str(x)}'] = pd.Series(test_difference_list)
             idx += 1
@@ -106,6 +94,7 @@ class Model:
         # Initialize lists of delta Y and number of ideal function
         deltas = []
         ideal_func = []
+        compare_value = math.sqrt(2)
 
         # Get each row of test_difference_df
         # index = x; row = Differences between Test Y and Ideal Functions
@@ -114,11 +103,6 @@ class Model:
             # Find minimum difference
             min_idx = row.idxmin()
             test_diff_value = float(test_difference_df.loc[index][min_idx])
-
-            # Get x value from ColumnName
-            x_value = float(index.split('_')[1])
-
-            compare_value = float(difference_df.loc[difference_df['x'] == x_value, f'Diff_factor_{min_idx}'])
 
             # Compare if test_diff_value is lower than mean squared difference
             if test_diff_value < compare_value:

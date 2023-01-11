@@ -22,9 +22,9 @@ if __name__ == "__main__":
     
     manager.write_to_db(test_table, 'Test-Data-Validated')
 
+    graph.plot_data(data_list['train'], label='Train Data', multiple_y=True, key='train')
     graph.plot_data(data_list['ideal'], label='Ideal Functions', multiple_y=True, key='ideal')
     graph.plot_data(data_list['test'], label='Test Data', multiple_y=False)
-    graph.plot_data(data_list['train'], label='Train Data', multiple_y=True, key='train')
     graph.plot_validation(test_values_func, test_values_nan, data_list['ideal'], keys, label='Validation Testdata to Ideal Function')
 
 

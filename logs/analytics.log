@@ -73,3 +73,15 @@
 2023-01-11 16:36:42,644 - INFO - Validated Data - Hits: 85 of 100
 2023-01-11 16:36:42,644 - INFO - Validated Data - HitRate: 85.0%
 2023-01-11 16:36:42,644 - INFO - Validated Data - Mean: 0.7541934631635473
+2023-01-11 17:54:37,230 - INFO - Train Data Shape: (400, 6)
+2023-01-11 17:54:37,231 - INFO - Ideal Data Shape: (400, 52)
+2023-01-11 17:54:37,231 - INFO - Test Data Shape: (100, 3)
+2023-01-11 17:54:37,231 - INFO - Validated Data - Hits: 84 of 100
+2023-01-11 17:54:37,231 - INFO - Validated Data - HitRate: 84.0%
+2023-01-11 17:54:37,231 - INFO - Validated Data - Mean: 0.6407810373214284
+2023-01-11 17:58:02,818 - INFO - Train Data Shape: (400, 6)
+2023-01-11 17:58:02,819 - INFO - Ideal Data Shape: (400, 52)
+2023-01-11 17:58:02,819 - INFO - Test Data Shape: (100, 3)
+2023-01-11 17:58:02,819 - INFO - Validated Data - Hits: 84 of 100
+2023-01-11 17:58:02,819 - INFO - Validated Data - HitRate: 84.0%
+2023-01-11 17:58:02,819 - INFO - Validated Data - Mean: 0.6407810373214284
