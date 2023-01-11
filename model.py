@@ -59,13 +59,12 @@ class Model:
         self.logger.info(f'Successfully found best ideal functions')
         return best_func_keys
 
-    def validate_best_func(self, best_func_keys: list, diff: str) -> pd.DataFrame:
+    def validate_best_func(self, best_func_keys: list) -> pd.DataFrame:
         """
         Validate best function with test values and calculate difference. Returns a dataframe of test values and
         given difference of the best ideal func if difference is smaller than the difference
         between train and test factorized by sqrt(2).
         :param best_func_keys: list, List of best functions which are evaluated by get_best_func() Method
-        :param diff: string, diff=ms will take mean squared difference for validation
         :return: test_table_df: pd.Dataframe, Data of test table
         """
         difference_df = pd.DataFrame(self.train_df['x'].round(1))
@@ -78,7 +77,8 @@ class Model:
             for train_value, ideal_value in zip(self.train_df[f'y{train_index}'], self.ideal_df[i]):
                 difference_df[i] = self.ideal_df[i]
                 # Substract x from y and save the result with factor sqrt(2) into dataframe
-                differences_list.append(abs(train_value - ideal_value) * math.sqrt(2))
+                # differences_list.append(abs(train_value - ideal_value) * math.sqrt(2))
+                differences_list.append(math.sqrt(2))
 
             difference_df[f'Diff_factor_{i}'] = pd.Series(differences_list)
             train_index += 1
@@ -118,11 +118,7 @@ class Model:
             # Get x value from ColumnName
             x_value = float(index.split('_')[1])
 
-            # Get mean squared difference value of Train & Ideal in order to compare both values
-            if diff == 'ms':
-                compare_value = float((difference_df[f'Diff_factor_{min_idx}'].sum()**2)/len(difference_df[f'Diff_factor_{min_idx}']))
-            else:
-                compare_value = float(difference_df.loc[difference_df['x'] == x_value, f'Diff_factor_{min_idx}'])
+            compare_value = float(difference_df.loc[difference_df['x'] == x_value, f'Diff_factor_{min_idx}'])
 
             # Compare if test_diff_value is lower than mean squared difference
             if test_diff_value < compare_value:

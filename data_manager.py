@@ -105,8 +105,12 @@ class Manager(object):
         """
 
         # Initialize needed table names and dictionary
-        table_list = self.meta.tables.keys()
+        table_list = list(self.meta.tables.keys())
         df_dict = {}
+        test_data_checker = ['Test-Data-Validated']
+
+        if all(x in table_list for x in test_data_checker):
+            table_list.remove(test_data_checker[0])
 
         for table in table_list:
 

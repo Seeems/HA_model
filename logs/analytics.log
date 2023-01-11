@@ -61,3 +61,9 @@
 2023-01-08 21:10:26,993 - INFO - Validated Data - Hits: 17 of 100
 2023-01-08 21:10:26,993 - INFO - Validated Data - HitRate: 17.0%
 2023-01-08 21:10:26,993 - INFO - Validated Data - Mean: 0.3504946906258117
+2023-01-11 16:29:09,968 - INFO - Train Data Shape: (400, 6)
+2023-01-11 16:29:09,968 - INFO - Ideal Data Shape: (400, 52)
+2023-01-11 16:29:09,968 - INFO - Test Data Shape: (100, 3)
+2023-01-11 16:29:09,968 - INFO - Validated Data - Hits: 85 of 100
+2023-01-11 16:29:09,968 - INFO - Validated Data - HitRate: 85.0%
+2023-01-11 16:29:09,968 - INFO - Validated Data - Mean: 0.7541934631635473

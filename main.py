@@ -10,14 +10,9 @@ if __name__ == "__main__":
     manager = data_manager.Manager()
     data_list = manager.load_data()
 
-    diff_calc = input('Enter "ms" for mean squared difference')
-
-    if diff_calc != 'ms':
-        diff_calc = None
-
     model = model.Model(data_list)
     keys = model.get_best_func()
-    test_table = model.validate_best_func(diff=diff_calc, best_func_keys=keys)
+    test_table = model.validate_best_func(best_func_keys=keys)
 
     kpi = analytics.Analyzer(data_list, test_table)
     kpi.validation_kpi()

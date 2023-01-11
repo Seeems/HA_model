@@ -203,3 +203,28 @@
 2023-01-08 21:10:23,445 - INFO - ideal table already exists
 2023-01-08 21:10:23,447 - INFO - train table already exists
 2023-01-08 21:10:27,040 - INFO - Test-Data-Validated table creation successfully
+2023-01-11 16:21:08,639 - INFO - Initializing database. Checking if database exists.
+2023-01-11 16:21:08,658 - INFO - test table already exists
+2023-01-11 16:21:08,671 - INFO - ideal table already exists
+2023-01-11 16:21:08,675 - INFO - train table already exists
+2023-01-11 16:21:08,697 - WARNING - Test-Data-Validated do not exists. Stopping program...
+2023-01-11 16:21:29,188 - INFO - Initializing database. Checking if database exists.
+2023-01-11 16:21:29,209 - INFO - test table already exists
+2023-01-11 16:21:29,218 - INFO - ideal table already exists
+2023-01-11 16:21:29,221 - INFO - train table already exists
+2023-01-11 16:21:29,245 - WARNING - Test-Data-Validated do not exists. Stopping program...
+2023-01-11 16:21:53,102 - INFO - Initializing database. Checking if database exists.
+2023-01-11 16:21:53,131 - INFO - test table already exists
+2023-01-11 16:21:53,143 - INFO - ideal table already exists
+2023-01-11 16:21:53,147 - INFO - train table already exists
+2023-01-11 16:21:53,174 - WARNING - Test-Data-Validated do not exists. Stopping program...
+2023-01-11 16:25:13,218 - INFO - Initializing database. Checking if database exists.
+2023-01-11 16:25:13,254 - INFO - test table already exists
+2023-01-11 16:25:13,266 - INFO - ideal table already exists
+2023-01-11 16:25:13,270 - INFO - train table already exists
+2023-01-11 16:25:15,030 - WARNING - Test-Data-Validated do not exists. Stopping program...
+2023-01-11 16:29:06,439 - INFO - Initializing database. Checking if database exists.
+2023-01-11 16:29:06,462 - INFO - test table already exists
+2023-01-11 16:29:06,469 - INFO - ideal table already exists
+2023-01-11 16:29:06,473 - INFO - train table already exists
+2023-01-11 16:29:10,014 - INFO - Test-Data-Validated table creation successfully
